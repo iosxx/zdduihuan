@@ -6,16 +6,15 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write  # 添加写入权限
+  contents: write  # 这样GITHUB_TOKEN就有写入权限了
 
 jobs:
   checkin:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.PERSONAL_TOKEN }}
-          
+        # 这里不需要指定token，因为默认使用GITHUB_TOKEN，而且我们有contents:write权限
+
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
@@ -37,5 +36,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.PERSONAL_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # 使用GITHUB_TOKEN
           publish_dir: ./dist
