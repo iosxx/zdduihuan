@@ -29,7 +29,7 @@ LUCKYDRAW_COOKIE = os.getenv("LUCKYDRAW_COOKIE", "").strip()
 # Next.js Server Action 标识（平台经常变，抓包后放 secrets）
 LUCKYDRAW_NEXT_ACTION = os.getenv("LUCKYDRAW_NEXT_ACTION", "").strip()
 # Next Router State（同上）
-LUCKYDRAW_NEXT_ROUTER_STATE = os.getenv("").strip()
+LUCKYDRAW_NEXT_ROUTER_STATE = os.getenv("LUCKYDRAW_NEXT_ROUTER_STATE", "").strip()
 
 # 【兑换】必要 Cookie & 头
 TOPUP_COOKIE = os.getenv("TOPUP_COOKIE", "").strip()
