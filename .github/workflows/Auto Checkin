@@ -1,0 +1,37 @@
+name: Auto Checkin
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # 每天 UTC 时间 8:00 运行（新加坡时间 16:00）
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  checkin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          
+      - name: Install dependencies
+        run: pip install requests
+        
+      - name: Run auto checkin
+        env:
+          LUCKYDRAW_COOKIE: ${{ secrets.LUCKYDRAW_COOKIE }}
+          LUCKYDRAW_NEXT_ACTION: ${{ secrets.LUCKYDRAW_NEXT_ACTION }}
+          LUCKYDRAW_NEXT_ROUTER_STATE: ${{ secrets.LUCKYDRAW_NEXT_ROUTER_STATE }}
+          TOPUP_COOKIE: ${{ secrets.TOPUP_COOKIE }}
+          TOPUP_NEW_API_USER: ${{ secrets.TOPUP_NEW_API_USER }}
+          PLUSPUSH_TOKEN: ${{ secrets.PLUSPUSH_TOKEN }}
+        run: python auto_checkin.py
+        
+      - name: Deploy to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
