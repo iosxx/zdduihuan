@@ -1,0 +1,49 @@
+{
+  "date": "2025-11-02 21:48:42",
+  "timezone": "Asia/Singapore",
+  "total_amount": 0,
+  "items": [
+    {
+      "draw_msg": "抽奖接口返回 403（Cloudflare 挑战），请更新 LUCKYDRAW_COOKIE/Next-Action 参数。",
+      "code": "",
+      "code_mask": "",
+      "topup_ok": false,
+      "topup_amount": "",
+      "topup_msg": "未获取到兑换码（抽奖接口返回 403（Cloudflare 挑战），请更新 LUCKYDRAW_COOKIE/Next-Action 参数。）"
+    },
+    {
+      "draw_msg": "抽奖接口返回 403（Cloudflare 挑战），请更新 LUCKYDRAW_COOKIE/Next-Action 参数。",
+      "code": "",
+      "code_mask": "",
+      "topup_ok": false,
+      "topup_amount": "",
+      "topup_msg": "未获取到兑换码（抽奖接口返回 403（Cloudflare 挑战），请更新 LUCKYDRAW_COOKIE/Next-Action 参数。）"
+    },
+    {
+      "draw_msg": "抽奖接口返回 403（Cloudflare 挑战），请更新 LUCKYDRAW_COOKIE/Next-Action 参数。",
+      "code": "",
+      "code_mask": "",
+      "topup_ok": false,
+      "topup_amount": "",
+      "topup_msg": "未获取到兑换码（抽奖接口返回 403（Cloudflare 挑战），请更新 LUCKYDRAW_COOKIE/Next-Action 参数。）"
+    },
+    {
+      "draw_msg": "抽奖接口返回 403（Cloudflare 挑战），请更新 LUCKYDRAW_COOKIE/Next-Action 参数。",
+      "code": "",
+      "code_mask": "",
+      "topup_ok": false,
+      "topup_amount": "",
+      "topup_msg": "未获取到兑换码（抽奖接口返回 403（Cloudflare 挑战），请更新 LUCKYDRAW_COOKIE/Next-Action 参数。）"
+    },
+    {
+      "draw_msg": "抽奖接口返回 403（Cloudflare 挑战），请更新 LUCKYDRAW_COOKIE/Next-Action 参数。",
+      "code": "",
+      "code_mask": "",
+      "topup_ok": false,
+      "topup_amount": "",
+      "topup_msg": "未获取到兑换码（抽奖接口返回 403（Cloudflare 挑战），请更新 LUCKYDRAW_COOKIE/Next-Action 参数。）"
+    }
+  ],
+  "today_tried": 5,
+  "today_target": 5
+}
